@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>TIC TAC TOE</title>
+</head>
+<body>
+
+<script>
+var image="player1.jpg";
+
+var tic = [0,0,0,0,0,0,0,0,0];
+var symbol='2';
+function pictureChange(img)
+{
+	imgid=document.getElementById(img).src;
+	var imgp=img;
+	
+if(imgid=="file:///C:/Users/kwad_97/Desktop/tnt.png")
+{
+
+	document.getElementById(img).src=image;
+			if(image=="player1.jpg")
+				image="player2.jpg"; 
+			else
+				image="player1.jpg"; 
+}
+else
+ alert("cell already pressed");
+
+if(symbol=='2') 
+	symbol='1';
+else
+	symbol='2';
+
+
+	mark(imgp);
+	var x=check();
+	if(x!=3)
+	draw();
+
+}
+
+function mark(numImg)
+ {
+
+ 	if(numImg=='img1')
+ 		{ tic[0]=symbol;  }
+ 	if(numImg=='img2')
+ 		tic[1]=symbol;
+ 	if(numImg=='img3')
+ 		tic[2]=symbol;
+
+ 	if(numImg=='img4')
+ 		tic[3]=symbol;
+ 	if(numImg=='img5')
+ 		tic[4]=symbol;
+ 	if(numImg=='img6')
+ 		tic[5]=symbol;
+
+ 	if(numImg=='img7')
+ 		tic[6]=symbol;
+ 	if(numImg=='img8')
+ 		tic[7]=symbol;
+ 	if(numImg=='img9')
+ 		tic[8]=symbol;
+
+ 	
+
+ }
+ function check()
+  {
+  		var s1 = tic[0];
+    	var s2 = tic[1];
+    	var s3 = tic[2];
+    	var s4 = tic[3];
+    	var s5 = tic[4];
+    	var s6 = tic[5];
+    	var s7 = tic[6];
+    	var s8 = tic[7];
+    	var s9 = tic[8];
+
+
+    	if((s1===s2 && s2===s3 && (s3=='1' || s3=='2')) || (s4===s5 && s5===s6  && (s6=='1' || s6=='2')) || (s7===s8 && s8===s9  && (s7=='1' || s7=='2')) || (s1===s4 && s4===s7 && (s4=="1" || s4=='2'))|| (s2===s5 && s5===s8 && (s5=='1' || s5=='2')) ||(s3===s6 && s6===s9 && (s6=='1' || s6=='2')) ||(s1===s5 && s5===s9 && (s5=='1' || s5=='2')) || (s3===s5 && s5===s7 && (s5=='1' || s5=='2') ))
+    	{
+    		
+    		if(symbol==1)
+    			alert("PLAYER 1 WINSSS . BIRDS RESCUED");
+    		else
+    			alert("PLAYER 2 WINSSS . PIGS WIN !");
+    		return 3;
+
+    	}
+    	
+    	
+  }
+  function draw() 
+     {
+		var s1 = tic[0];
+    	var s2 = tic[1];
+    	var s3 = tic[2];
+    	var s4 = tic[3];
+    	var s5 = tic[4];
+    	var s6 = tic[5];
+    	var s7 = tic[6];
+    	var s8 = tic[7];
+    	var s9 = tic[8];
+
+    	if((s1=='1' || s1=='2') && (s2=='1' || s2=='2') && (s3=='1' || s3=='2') && (s4=='1' || s4=='2') && (s5=='1' || s5=='2') && (s6=='1' || s6=='2') && (s8=='1' || s8=='2') && (s7=='1' || s7=='2') && (s9=='1' || s9=='2'))
+    		alert("DRAWWW :( . LETS DO IT AGAIN");
+    	
+    }
+
+
+</script>
+<br/>
+<center>
+<image src="TicTacToe-photo-logo.jpg" height="130" width="600">
+</center>
+<br/><br/><br/><br/><br/><br/>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<center>
+
+<table>
+<tr>
+<td><button id="b1"  onclick="pictureChange('img1')"><img src="tnt.png" id="img1"></button></td>
+<td><button id="b2" value="" onclick="pictureChange('img2')"><img src="tnt.png" id="img2"></button></td>
+<td><button id="b3" value="" onclick="pictureChange('img3')"><img src="tnt.png" id="img3"></button></td>
+</tr>
+<tr>
+<td><button id="b4" value="" onclick="pictureChange('img4')"><img src="tnt.png" id="img4"></button></td>
+<td><button id="b5" value="" onclick="pictureChange('img5')"><img src="tnt.png" id="img5"></button></td>
+<td><button id="b6" value="" onclick="pictureChange('img6')"><img src="tnt.png" id="img6"></button></td>
+</tr>
+<tr>
+<td><button id="b7" value="" onclick="pictureChange('img7')"><img src="tnt.png" id="img7"></button></td>
+<td><button id="b8" value="" onclick="pictureChange('img8')"><img src="tnt.png" id="img8"></button></td>
+<td><button id="b9" value="" onclick="pictureChange('img9')"><img src="tnt.png" id="img9"></button></td>
+</tr>
+</table>
+
+</center>
+</body>
+</html>

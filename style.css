@@ -1,0 +1,21 @@
+body {
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+}
+table {
+
+text-align: center;
+}
+td {
+
+height: 100px;
+width: 100px;
+}
+button {
+	
+	height: 100px;
+	width: 100px;
+}
+
+
+
